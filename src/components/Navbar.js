@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container header-inner">
         <Link to="/" className="logo-link" aria-label="HexHive Home" onClick={closeMenu}>
           <div className="logo">
-            <img src="/favicon_transparent.png" alt="HexHive" className="logo-img" width="90" height="90" />
+            <img src={`${process.env.PUBLIC_URL}/favicon_transparent.png`} alt="HexHive" className="logo-img" width="90" height="90" />
             <span className="logo-text">HexHive</span>
           </div>
         </Link>
@@ -59,6 +59,7 @@ const Navbar = () => {
       <div id="mobile-menu" className="mobile-menu" hidden={!isMenuOpen} ref={menuRef}>
         <NavLink to="/" className="nav-link mobile-nav-link" onClick={closeMenu}>Home</NavLink>
         <NavLink to="/programs" className="nav-link mobile-nav-link" onClick={closeMenu}>Programs</NavLink>
+        <NavLink to="/certificate" className="nav-link mobile-nav-link" onClick={closeMenu}>Certificate</NavLink>
         <NavLink to="/register" className="nav-link mobile-nav-link" onClick={closeMenu}>Enroll Now</NavLink>
       </div>
     </header>
