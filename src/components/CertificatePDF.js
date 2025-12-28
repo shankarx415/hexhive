@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   dateText: {
     position: 'absolute',
     left: 50,
-    bottom: 200, 
+    bottom: 200,
     fontSize: 11,
   },
   // NEW STYLE FOR CERTIFICATE ID
@@ -176,11 +176,11 @@ const CertificatePDF = ({ data }) => {
       <Page size="A4" style={styles.page}>
 
         {/* BIG LEFT-SIDE WATERMARK */}
-        <Image src="/favicon_transparent.png" style={styles.watermark} />
+        <Image src={process.env.PUBLIC_URL + "/favicon_transparent.png"} style={styles.watermark} />
 
         {/* HEADER */}
         <View style={styles.header}>
-          <Image src="/favicon_transparent.png" style={styles.logoImage} />
+          <Image src={process.env.PUBLIC_URL + "/favicon_transparent.png"} style={styles.logoImage} />
           <View style={styles.logoTextCol}>
             <Text style={styles.logoTitle}>hexhive</Text>
             <Text style={styles.logoSubtitle}>solutions</Text>
