@@ -34,10 +34,11 @@ const Navbar = () => {
             <span className="logo-text">HexHive</span>
           </div>
         </Link>
-        
+
         <nav className="main-nav" role="navigation" aria-label="Main navigation">
           <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Home</NavLink>
           <NavLink to="/programs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Programs</NavLink>
+          <NavLink to="/certificate" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Certificate</NavLink>
           <NavLink to="/register" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Enroll Now</NavLink>
         </nav>
 
