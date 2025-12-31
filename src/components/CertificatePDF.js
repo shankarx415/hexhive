@@ -122,11 +122,10 @@ const styles = StyleSheet.create({
     bottom: 200,
     fontSize: 11,
   },
-  // NEW STYLE FOR CERTIFICATE ID
   certIdText: {
     position: 'absolute',
     left: 50,
-    bottom: 180, // 20 units below dateText (200 - 20)
+    bottom: 180, 
     fontSize: 11,
   },
 
@@ -189,32 +188,32 @@ const CertificatePDF = ({ data }) => {
 
         {/* TITLES */}
         <View style={styles.titleBlock}>
-          <Text style={styles.mainHeading}>INTERNSHIP CERTIFICATE</Text>
+          {/* Updated Title */}
+          <Text style={styles.mainHeading}>CERTIFICATE OF COMPLETION</Text>
           <Text style={styles.subHeading}>TO WHOMSOEVER IT MAY CONCERN</Text>
         </View>
 
-        {/* CONTENT */}
+        {/* CONTENT - UPDATED GRAMMAR */}
         <View style={styles.bodyContainer}>
           <Text style={styles.paragraph}>
-            This is to certify that <Text style={styles.bold}>{data.name}</Text>, Register Number: <Text style={styles.bold}>{data.regNo}</Text> from {data.college} have successfully completed the internship program from <Text style={styles.bold}>{data.startDate} to {data.endDate}</Text>.
+            This is to certify that <Text style={styles.bold}>{data.name}</Text>, Register Number: <Text style={styles.bold}>{data.regNo}</Text>, from {data.college}, has successfully completed the internship program from <Text style={styles.bold}>{data.startDate}</Text> to <Text style={styles.bold}>{data.endDate}</Text>.
           </Text>
 
           <Text style={styles.paragraph}>
-            Internship: "<Text style={styles.bold}>{data.topic}</Text>"
+            Internship Title: <Text style={styles.bold}>{data.topic}</Text>
           </Text>
 
           <Text style={styles.paragraph}>
-            During the internship program, we found him/her active and competent in learning/executing all assigned tasks and services were found to be satisfactory.
+            During the internship program, we found him/her to be active, competent, and diligent in learning and executing all assigned tasks. The services rendered were found to be satisfactory.
           </Text>
 
           <Text style={styles.paragraph}>
-            We wish him great success in all of his future endeavors.
+            We wish him/her great success in all future endeavors.
           </Text>
         </View>
 
         {/* DATE & ID */}
         <Text style={styles.dateText}>Date : {data.issueDate}</Text>
-        {/* NEW CERTIFICATE ID */}
         <Text style={styles.certIdText}>Certificate ID : {data.certificateId}</Text>
 
         {/* SIGNATURE */}
